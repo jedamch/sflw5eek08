@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Students List</title>
+    </head>
+
+    <body>
+        <h1>Students List</h1>
+        <ul>
+            <% students.forEach(student=> { %>
+                <li><a href="/student/<%= student._id %>">
+                        <%= student.name %> - <%= student.course %>
+                    </a></li>
+                <% }) %>
+        </ul>
+        <a href="/student/new">Add a New Student</a>
+    </body>
+
+    </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <p>ID: <%= student._id %>
+    </p>
+    <p>Name: <%= student.name %>
+    </p>
+    <p>Age: <%= student.age %>
+    </p>
+    <p>Course: <%= student.course %>
+    </p>
+    <a href="/student/<%= student._id %>/edit">Edit</a>
+    <form action="/student/<%= student._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+    <br>
+    <a href="/students">Back to List</a>
+</body>
+</html>
