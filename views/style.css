@@ -1,0 +1,272 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #2d3748;
+    min-height: 100vh;
+}
+ 
+/* ===== Layout ===== */
+header {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+ 
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+ 
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.2rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+ 
+nav a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+ 
+.container {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+ 
+/* ===== Page Headings ===== */
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: #1a365d;
+    border-bottom: 2px solid #bee3f8;
+    padding-bottom: 0.5rem;
+}
+ 
+/* ===== Student Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+ 
+thead {
+    background-color: #2b6cb0;
+    color: white;
+}
+ 
+thead th {
+    padding: 0.9rem 1.2rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+ 
+tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.15s;
+}
+ 
+tbody tr:last-child {
+    border-bottom: none;
+}
+ 
+tbody tr:hover {
+    background-color: #ebf8ff;
+}
+ 
+tbody td {
+    padding: 0.85rem 1.2rem;
+    font-size: 0.95rem;
+}
+ 
+/* ===== Student Detail Card ===== */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+}
+ 
+.card p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: #4a5568;
+}
+ 
+.card p strong {
+    color: #2d3748;
+    min-width: 80px;
+    display: inline-block;
+}
+ 
+/* ===== Forms ===== */
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    max-width: 480px;
+}
+ 
+.form-group {
+    margin-bottom: 1.2rem;
+}
+ 
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+ 
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #2d3748;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+ 
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+ 
+/* ===== Buttons ===== */
+.btn {
+    display: inline-block;
+    padding: 0.55rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.2s, transform 0.1s;
+}
+ 
+.btn:active {
+    transform: scale(0.97);
+}
+ 
+.btn-primary {
+    background-color: #2b6cb0;
+    color: white;
+}
+ 
+.btn-primary:hover {
+    background-color: #2c5282;
+}
+ 
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #2d3748;
+}
+ 
+.btn-secondary:hover {
+    background-color: #cbd5e0;
+}
+ 
+.btn-danger {
+    background-color: #e53e3e;
+    color: white;
+}
+ 
+.btn-danger:hover {
+    background-color: #c53030;
+}
+ 
+.btn-success {
+    background-color: #38a169;
+    color: white;
+}
+ 
+.btn-success:hover {
+    background-color: #276749;
+}
+ 
+/* ===== Action Links in Table ===== */
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+ 
+/* ===== Top Bar (Add button + heading row) ===== */
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+ 
+.page-header h2 {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+ 
+/* ===== Empty State ===== */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #a0aec0;
+    font-size: 1rem;
+}
+ 
+/* ===== Form Actions ===== */
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+ 
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+ 
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+ 
+    table {
+        font-size: 0.85rem;
+    }
+ 
+    thead th, tbody td {
+        padding: 0.65rem 0.8rem;
+    }
+}
